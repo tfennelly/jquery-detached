@@ -1,6 +1,6 @@
 {
-    "name": "detached-jquery-1.6.4",
-    "version": "1.6.4",
+    "name": "detached-jquery",
+    "version": "1.7.2",
     "description": "Module for creating multiple jQuery instances, detached from the global namespace (window).",
     "main": "js/index.js",
     "scripts": {
