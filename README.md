@@ -9,7 +9,8 @@ Install Package:
 npm install --save detached-jquery-<jquery-version>
 ```
 
-Of course, the above will depend on whether or not we have published that exact version of jquery. Ping us if we haven't.
+Of course, the above will depend on whether or not we have published that exact version of jquery. 
+The easiest way to see the versions we have published is to look at the branch names on GutHub
 
 # Motivation
 
@@ -48,10 +49,16 @@ var jQuery = require('detached-jquery-<jquery-version>');
 var $ = jQuery.newJQuery();
 
 //
-// Probably need to perform a "noConflict" equivalent operation, backing up the existing jQuery
-// globals if any and installing this version (window.$ and window.jQuery). Then "statically" initialise your 
-// library here, allowing it to glom onto your jQuery instance. Then restore the global namespace to its
-// original state.
+// Do something with your jQuery/$ instance. See notes below.
 // 
 ```
+
+As regards what needs to be done with your `$`, you probably need to perform a `noConflict` equivalent operation. 
+Here are some random thoughts:
+
+* backup the existing `jQuery` and `$` globals, if any (ala `noConflict`)
+* set your `$`  on `window.$` and `window.jQuery`
+* "statically" initialise your library, allowing it to glom onto your `$` instance
+* save you `$` somewhere that you can ref it again easily e.g. some other special/private namespace
+* restore the global namespace to its original state (ala `noConflict`)
 
