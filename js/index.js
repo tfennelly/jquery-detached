@@ -40,8 +40,7 @@ exports.getJQuery = function () {
  */
 exports.newJQuery = function () {
     function newJQueryInstance() {
-        var internal = require('./internal');
-        var window = internal.getWindow();
+        var window = require('window-handle').getWindow();
         
         /*! jQuery v1.9.1 | (c) 2005, 2012 jQuery Foundation, Inc. | jquery.org/license
         //@ sourceMappingURL=jquery.min.map
