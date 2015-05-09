@@ -40,8 +40,7 @@ exports.getJQuery = function () {
  */
 exports.newJQuery = function () {
     function newJQueryInstance() {
-        var internal = require('./internal');
-        var window = internal.getWindow();
+        var window = require("window-handle").getWindow();
         var module = undefined; // hide the CommonJS module
         
         /*! jQuery v2.1.4 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license */
