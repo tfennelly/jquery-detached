@@ -26,7 +26,7 @@ environment, where everything is controlled (extensions etc), or in an environme
 modified through extension. 
 
 
-```
+```javascript
 var jQuery = require('detached-jquery-<jquery-version>');
 var $ = jQuery.getJQuery();
 
@@ -44,7 +44,7 @@ able to co-exist e.g. in the Jenkins CI ecosystem, where there are 1000+ plugins
 be using a variety of different JavaScript libraries that depend on jQuery (and different versions
 of jQuery).
 
-```
+```javascript
 var jQuery = require('detached-jquery-<jquery-version>');
 var $ = jQuery.newJQuery();
 
