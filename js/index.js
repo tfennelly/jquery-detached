@@ -39,8 +39,9 @@ exports.getJQuery = function () {
  * @returns A new jQuery instance.
  */
 exports.newJQuery = function () {
+    var window = require("window-handle").getWindow();
+
     function newJQueryInstance() {
-        var window = require("window-handle").getWindow();
         var module = undefined; // hide the CommonJS module
         
         /*! jQuery v2.1.4 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license */
@@ -54,5 +55,7 @@ exports.newJQuery = function () {
         return jQuery;
     }
     
-    return newJQueryInstance();
+    var jQuery = newJQueryInstance.call(window);
+    
+    return jQuery;
 }
