@@ -1,6 +1,6 @@
 {
   "name": "detached-jquery",
-  "version": "2.1.4-v3",
+  "version": "2.1.4-v4",
   "description": "Module for creating multiple jQuery instances, detached from the global namespace (window).",
   "main": "js/index.js",
   "scripts": {
@@ -18,6 +18,6 @@
     "jsdom": "3.1.2"
   },
   "dependencies": {
-    "window-handle": "^0.0.3"
+    "window-handle": "^0.0.4"
   }
 }
