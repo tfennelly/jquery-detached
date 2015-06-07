@@ -6,7 +6,7 @@ __TODO Rename package to "jquery-detached" once we figure out of this is going t
 Install Package:
 
 ```
-npm install --save detached-jquery-<jquery-version>
+npm install --save jquery-detached-<jquery-version>
 ```
 
 Of course, the above will depend on whether or not we have published that exact version of jquery. 
@@ -27,7 +27,7 @@ modified through extension.
 
 
 ```javascript
-var jQuery = require('detached-jquery-<jquery-version>');
+var jQuery = require('jquery-detached-<jquery-version>');
 var $ = jQuery.getJQuery();
 
 var myDivs = $('.myDivs');
@@ -45,7 +45,7 @@ be using a variety of different JavaScript libraries that depend on jQuery (and 
 of jQuery).
 
 ```javascript
-var jQuery = require('detached-jquery-<jquery-version>');
+var jQuery = require('jquery-detached-<jquery-version>');
 var $ = jQuery.newJQuery();
 
 //
