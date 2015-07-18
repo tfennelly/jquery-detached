@@ -19,7 +19,7 @@ exports.getJQuery = function () {
         sharedJQuery = exports.newJQuery();
     }
     return sharedJQuery;
-}
+};
 
 /**
  * Get a new jQuery instance, detached from the global namespace (window).
@@ -58,4 +58,14 @@ exports.newJQuery = function () {
     var jQuery = newJQueryInstance.call(window);
     
     return jQuery;
+};
+
+/**
+ * Clear/delete the shared instance.
+ * <p>
+ * This is useful e.g. for testing with jsdom, as it allows us to bind the shared jQuery instance to a new 
+ * window instance.
+ */
+exports.clearSharedJQuery = function() {
+    sharedJQuery = undefined;
 }
