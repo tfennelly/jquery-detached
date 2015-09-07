@@ -1,8 +1,6 @@
 NPM module that allows you to get __multiple__ jQuery instances that are "detached" from the global namespace (`window`)
 i.e. different versions of jQuery and/or multiple instances of the same version. 
 
-__TODO Rename package to "jquery-detached" once we figure out of this is going to work. Do a global s&r__
-
 Install Package:
 
 ```
