@@ -1,3 +1,4 @@
+var windowHandle = require('window-handle');
 var sharedJQuery;
 
 /**
@@ -39,7 +40,7 @@ exports.getJQuery = function () {
  * @returns A new jQuery instance.
  */
 exports.newJQuery = function () {
-    var window = require("window-handle").getWindow();
+    var window = windowHandle.getWindow();
 
     function newJQueryInstance() {
         var module = undefined; // hide the CommonJS module
@@ -69,3 +70,9 @@ exports.newJQuery = function () {
 exports.clearSharedJQuery = function() {
     sharedJQuery = undefined;
 }
+
+// Listen for window resets (e.g. in a test env) and clear the
+// shared jQuery instance.
+windowHandle.getWindow(function() {
+    exports.clearSharedJQuery();
+});
