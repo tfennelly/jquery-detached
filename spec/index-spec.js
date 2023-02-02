@@ -3,20 +3,20 @@
 
 "use strict";
 
-var testUtil = require("./test-util");
+const testUtil = require("./test-util");
 
 describe("index.js", function () {
 
     it("- test", function (done) {
         testUtil.onPage(function(window) {
-            var jqueryDetached = require("../js/index");            
+            var jqueryDetached = require("../js/index");
             var $1 = jqueryDetached.getJQuery();
-            
+
             expect(window.$).not.toBeDefined();
             expect(window.jQuery).not.toBeDefined();
-            
+
             expect($1('#divOnPage').text()).toBe('jQuery Detached');
-            
+
             var $2 = jqueryDetached.getJQuery();
             expect($1 === $2).toBe(true);
 
@@ -25,7 +25,7 @@ describe("index.js", function () {
 
             expect($1('#divOnPage').text()).toBe('jQuery Detached');
             expect($3('#divOnPage').text()).toBe('jQuery Detached');
-            
+
             $1.fn.greenify = function() {
                 this.css( "color", "green" );
             };
@@ -38,7 +38,7 @@ describe("index.js", function () {
             } catch (e) {
                 // This is expected
             }
-            
+
             done();
         });
     });
