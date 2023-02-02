@@ -1,16 +1,16 @@
 {
-  "name": "jquery-detached",
-  "version": "2.1.4-v4",
+  "name": "jquery-detached2",
+  "version": "2.1.15-v1",
   "description": "Module for creating multiple jQuery instances, detached from the global namespace (window).",
   "main": "js/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Tom Fennelly <tom.fennelly@gmail.com> (https://github.com/tfennelly)",
+  "author": "Sam <samuel1998.schwanzer@gmail.com> (https://github.com/SamTV12345)",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tfennelly/jquery-detached"
+    "url": "https://github.com/SamTV12345/jquery-detached.git"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
